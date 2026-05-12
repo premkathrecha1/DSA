@@ -882,88 +882,120 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// // Function to check if a number is prime
+// bool isPrime(int n) {
+//     if (n <= 1) {
+//         return false;
+//     }
+
+//     for (int i = 2; i <= n / 2; i++) {
+//         if (n % i == 0) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
+// // Function to print all prime numbers from 1 to N
+// void printPrimes(int N) {
+//     cout << "Prime numbers from 1 to " << N << " are:\n";
+
+//     for (int i = 2; i <= N; i++) {
+//         if (isPrime(i)) {
+//             cout << i << " ";
+//         }
+//     }
+
+//     cout << endl;
+// }
+
+// // Function to print nth Fibonacci number
+// void printNthFibonacci(int n) {
+//     int a = 0, b = 1, c;
+
+//     if (n == 1) {
+//         cout << "Nth Fibonacci number is: " << a << endl;
+//         return;
+//     }
+
+//     if (n == 2) {
+//         cout << "Nth Fibonacci number is: " << b << endl;
+//         return;
+//     }
+
+//     for (int i = 3; i <= n; i++) {
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+
+//     cout << "Nth Fibonacci number is: " << b << endl;
+// }
+
+// int main() {
+//     int num, N, fibN;
+
+//     // Check prime number
+//     cout << "Enter a number to check prime: ";
+//     cin >> num;
+
+//     if (isPrime(num)) {
+//         cout << num << " is a Prime number.\n";
+//     } else {
+//         cout << num << " is NOT a Prime number.\n";
+//     }
+
+//     cout << endl;
+
+//     // Print primes from 1 to N
+//     cout << "Enter value of N: ";
+//     cin >> N;
+
+//     printPrimes(N);
+
+//     cout << endl;
+
+//     // Print nth Fibonacci number
+//     cout << "Enter position for Fibonacci number: ";
+//     cin >> fibN;
+
+//     printNthFibonacci(fibN);
+
+//     return 0;
+// }
+
+
+
+
+
+
+//CH: 6 
+// Binary Number System
+
+
 #include <iostream>
 using namespace std;
 
-// Function to check if a number is prime
-bool isPrime(int n) {
-    if (n <= 1) {
-        return false;
+int decToBinary(int decNum) {
+    int ans = 0, pow = 1;
+
+    while(decNum > 0) {
+        int rem = decNum % 2;
+        decNum /= 2;
+
+        ans += rem * pow;
+        pow *= 10;
     }
-
-    for (int i = 2; i <= n / 2; i++) {
-        if (n % i == 0) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-// Function to print all prime numbers from 1 to N
-void printPrimes(int N) {
-    cout << "Prime numbers from 1 to " << N << " are:\n";
-
-    for (int i = 2; i <= N; i++) {
-        if (isPrime(i)) {
-            cout << i << " ";
-        }
-    }
-
-    cout << endl;
-}
-
-// Function to print nth Fibonacci number
-void printNthFibonacci(int n) {
-    int a = 0, b = 1, c;
-
-    if (n == 1) {
-        cout << "Nth Fibonacci number is: " << a << endl;
-        return;
-    }
-
-    if (n == 2) {
-        cout << "Nth Fibonacci number is: " << b << endl;
-        return;
-    }
-
-    for (int i = 3; i <= n; i++) {
-        c = a + b;
-        a = b;
-        b = c;
-    }
-
-    cout << "Nth Fibonacci number is: " << b << endl;
+    return ans; // binary form
 }
 
 int main() {
-    int num, N, fibN;
-
-    // Check prime number
-    cout << "Enter a number to check prime: ";
-    cin >> num;
-
-    if (isPrime(num)) {
-        cout << num << " is a Prime number.\n";
-    } else {
-        cout << num << " is NOT a Prime number.\n";
-    }
-
-    cout << endl;
-
-    // Print primes from 1 to N
-    cout << "Enter value of N: ";
-    cin >> N;
-
-    printPrimes(N);
-
-    cout << endl;
-
-    // Print nth Fibonacci number
-    cout << "Enter position for Fibonacci number: ";
-    cin >> fibN;
-
-    printNthFibonacci(fibN);
+    int decNum = 50;
+    cout << decToBinary(decNum) << endl;
 
     return 0;
 }
