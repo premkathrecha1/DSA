@@ -849,30 +849,121 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// int factorial(int n) {
+//     int fact = 1;
+
+//     for(int i=1; i<=n; i++) {
+//         fact *= i;
+//     }
+//     return fact;
+// }
+
+// int nCr(int n, int r){
+//      int fact_n = factorial(n);
+//         int fact_r = factorial(r);
+//         int fact_nmr = factorial(n-r);
+
+//         return fact_n / (fact_r * fact_nmr);
+// }
+
+// int main() {
+//     int n=8, r=2;
+
+//     cout << nCr(n,r) << endl;
+    
+//     return 0;
+// }
+
+
+
+
+
+
 #include <iostream>
 using namespace std;
 
-int factorial(int n) {
-    int fact = 1;
-
-    for(int i=1; i<=n; i++) {
-        fact *= i;
+// Function to check if a number is prime
+bool isPrime(int n) {
+    if (n <= 1) {
+        return false;
     }
-    return fact;
+
+    for (int i = 2; i <= n / 2; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
-int nCr(int n, int r){
-     int fact_n = factorial(n);
-        int fact_r = factorial(r);
-        int fact_nmr = factorial(n-r);
+// Function to print all prime numbers from 1 to N
+void printPrimes(int N) {
+    cout << "Prime numbers from 1 to " << N << " are:\n";
 
-        return fact_n / (fact_r * fact_nmr);
+    for (int i = 2; i <= N; i++) {
+        if (isPrime(i)) {
+            cout << i << " ";
+        }
+    }
+
+    cout << endl;
+}
+
+// Function to print nth Fibonacci number
+void printNthFibonacci(int n) {
+    int a = 0, b = 1, c;
+
+    if (n == 1) {
+        cout << "Nth Fibonacci number is: " << a << endl;
+        return;
+    }
+
+    if (n == 2) {
+        cout << "Nth Fibonacci number is: " << b << endl;
+        return;
+    }
+
+    for (int i = 3; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    cout << "Nth Fibonacci number is: " << b << endl;
 }
 
 int main() {
-    int n=8, r=2;
+    int num, N, fibN;
 
-    cout << nCr(n,r) << endl;
-    
+    // Check prime number
+    cout << "Enter a number to check prime: ";
+    cin >> num;
+
+    if (isPrime(num)) {
+        cout << num << " is a Prime number.\n";
+    } else {
+        cout << num << " is NOT a Prime number.\n";
+    }
+
+    cout << endl;
+
+    // Print primes from 1 to N
+    cout << "Enter value of N: ";
+    cin >> N;
+
+    printPrimes(N);
+
+    cout << endl;
+
+    // Print nth Fibonacci number
+    cout << "Enter position for Fibonacci number: ";
+    cin >> fibN;
+
+    printNthFibonacci(fibN);
+
     return 0;
 }
