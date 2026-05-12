@@ -731,46 +731,148 @@
           //          4
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
+// int main() {
 
-    int n = 4;
+//     int n = 4;
 
-    for(int i = 0; i < n; i++) {
+//     for(int i = 0; i < n; i++) {
 
-        // spaces
-        for(int j = 0; j < i; j++) {
-            cout << " ";
-        }
+//         // spaces
+//         for(int j = 0; j < i; j++) {
+//             cout << " ";
+//         }
 
-        // characters
-        for(int j = 0; j < n - i; j++) {
-            cout << char('A' + i);
-        }
+//         // characters
+//         for(int j = 0; j < n - i; j++) {
+//             cout << char('A' + i);
+//         }
 
-        cout << endl;
-    }
+//         cout << endl;
+//     }
 
-    return 0;
-}  //output : AAAA
+//     return 0;
+// }  //output : AAAA
         //     BBB
         //      CC
         //       D 
+  
+
+
+
+
+//function
+
+// #include <iostream>
+// using namespace std;
+
+// void printHello(){
+//     cout << "hello\n";
+// }
+
+// int main(){
+//     printHello();
+//     printHello();
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int printHello(){
+//     cout << "hello\n";
+//     return 3;
+// }
+
+// int main(){
+//    int val = printHello();
+//    cout << "val =" << val << endl;
+   
+//     return 0;
+// }
+//output: hello
+//        val = 3
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int sumN(int n) {
+//     int sum = 0;
+//     for(int i=1; i<=n; i++) {
+//         sum += i;
+//     }
+// return sum;
+// }
+
+// int main(){
+//     cout << sumN(5) << endl; // output: 15
+//     cout << sumN(10) << endl; // output: 55
+
+//     return 0;
+// }
+
+//calculate N factorial
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int sumN(int n) {
+//     int sum = 0;
+//     for(int i=1; i<=n; i++) {
+//         sum += i;
+//     }
+// return sum;
+// }
+
+// int factorialN(int n) {
+//     int fact = 1;
+
+//     for(int i=1; i<=n; i++) {
+//         fact *= i;
+//     }
+//     return fact;
+// }
+
+// int main(){
+//     cout << factorialN(5) << endl; // output: 120
+//     cout << sumN(10) << endl; // output: 55
+
+//     return 0;
+// }
+
+
 
 #include <iostream>
 using namespace std;
 
-int printHello(){
-    cout << "hello\n";
-    return 3;
+int factorial(int n) {
+    int fact = 1;
+
+    for(int i=1; i<=n; i++) {
+        fact *= i;
+    }
+    return fact;
 }
 
-int main(){
-   int val = printHello();
-   cout << "val =" << val << endl;
-   
+int nCr(int n, int r){
+     int fact_n = factorial(n);
+        int fact_r = factorial(r);
+        int fact_nmr = factorial(n-r);
+
+        return fact_n / (fact_r * fact_nmr);
+}
+
+int main() {
+    int n=8, r=2;
+
+    cout << nCr(n,r) << endl;
+    
     return 0;
 }
-  
