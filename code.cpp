@@ -873,12 +873,9 @@
 //     int n=8, r=2;
 
 //     cout << nCr(n,r) << endl;
-    
+
 //     return 0;
 // }
-
-
-
 
 
 
@@ -970,32 +967,61 @@
 
 
 
-
-
-
 //CH: 6 
 // Binary Number System
 
+// #include <iostream>
+// using namespace std;
+
+// int decToBinary(int decNum) {
+//     int ans = 0, pow = 1;
+
+//     while(decNum > 0) {
+//         int rem = decNum % 2;
+//         decNum /= 2;
+
+//         ans += rem * pow;
+//         pow *= 10;
+//     }
+//     return ans; // binary form
+// }
+
+// int main() {
+//     int decNum = 50;
+//     cout << decToBinary(decNum) << endl;
+
+//     return 0;
+// }
+
+
+//ch 7 
+
+//bitwise operator
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int a = 5; // 0101 in binary
+//     int b = 3; // 0011 in binary
+
+//     cout << (a ^ b) << endl; // bitwise AND
+   
+
+//     return 0;
+// }
+
+
+//data type modifier
 
 #include <iostream>
 using namespace std;
 
-int decToBinary(int decNum) {
-    int ans = 0, pow = 1;
+int main(){
 
-    while(decNum > 0) {
-        int rem = decNum % 2;
-        decNum /= 2;
-
-        ans += rem * pow;
-        pow *= 10;
-    }
-    return ans; // binary form
-}
-
-int main() {
-    int decNum = 50;
-    cout << decToBinary(decNum) << endl;
-
-    return 0;
+    cout << sizeof(int) << endl;
+    cout << sizeof(short) << endl;
+    cout << sizeof(long) << endl;
+    cout << sizeof(long long) << endl;
+return 0;
 }
