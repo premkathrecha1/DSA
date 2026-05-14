@@ -1014,14 +1014,72 @@
 
 //data type modifier
 
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+
+//     cout << sizeof(int) << endl;
+//     cout << sizeof(short) << endl;
+//     cout << sizeof(long) << endl;
+//     cout << sizeof(long long) << endl;
+// return 0;
+// }
+
+
+//array
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[5] = {1, 2, 3, 4, 5};
+
+//     for(int i=0; i<5; i++) {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+
+// //FIND SMALLEST NUMBER IN AN ARRAY
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int nums[] = {5, 15, 22, 1, -15, 24};
+//     int size = 6;
+
+//     int smallest = INT16_MAX;
+//     for(int i=0; i<size; i++) {
+//         if(nums[i] <smallest) {
+//             smallest = nums[i];
+//         }
+//     }
+
+//     cout << "Smallest number is: " << smallest << endl;
+//     return 0;
+// }
+
+
+//FIND SMALLEST & LARGEST NUMBER IN AN ARRAY
 #include <iostream>
 using namespace std;
 
 int main(){
+    int nums[] = {5, 15, 22, 1, -15, -24};
+    int size = 6;
 
-    cout << sizeof(int) << endl;
-    cout << sizeof(short) << endl;
-    cout << sizeof(long) << endl;
-    cout << sizeof(long long) << endl;
-return 0;
+    int smallest = INT16_MAX;
+    int largest = INT16_MIN;
+
+    for(int i=0; i<size; i++) {
+       smallest = min(smallest, nums[i]);
+       largest = max(largest, nums[i]);
+        }
+    
+
+    cout << "Smallest number is: " << smallest << endl;
+    cout << "Largest number is: " << largest << endl;
+    return 0;
 }
