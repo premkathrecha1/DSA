@@ -1062,24 +1062,466 @@
 // }
 
 
-//FIND SMALLEST & LARGEST NUMBER IN AN ARRAY
+// //FIND SMALLEST & LARGEST NUMBER IN AN ARRAY
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int nums[] = {5, 15, 22, 1, -15, -24};
+//     int size = 6;
+
+//     int smallest = INT16_MAX;
+//     int largest = INT16_MIN;
+
+//     for(int i=0; i<size; i++) {
+//        smallest = min(smallest, nums[i]);
+//        largest = max(largest, nums[i]);
+//         }
+    
+
+//     cout << "Smallest number is: " << smallest << endl;
+//     cout << "Largest number is: " << largest << endl;
+//     return 0;
+// }/
+
+
+
+// FIND SMALLEST & LARGEST NUMBER WITH INDEX
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+
+// int main() {
+//     int nums[] = {5, 15, 22, 1, -15, -24};
+//     int size = 6;
+
+//     int smallest = INT_MAX;
+//     int largest = INT_MIN;
+
+//     int smallIndex = 0;
+//     int largeIndex = 0;
+
+//     for(int i = 0; i < size; i++) {
+
+//         if(nums[i] < smallest) {
+//             smallest = nums[i];
+//             smallIndex = i;
+//         }
+
+//         if(nums[i] > largest) {
+//             largest = nums[i];
+//             largeIndex = i;
+//         }
+//     }
+
+//     cout << "Smallest number is: " << smallest << endl;
+//     cout << "Index of smallest number: " << smallIndex << endl;
+
+//     cout << "Largest number is: " << largest << endl;
+//     cout << "Index of largest number: " << largeIndex << endl;
+
+//     return 0;
+// }
+
+
+//vector
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     cout << vec.size() << endl; // output: 5
+
+//      for(int i=0; i<vec.size(); i++) {
+//         cout << vec[i] << " ";
+//      }
+//      cout << endl;
+
+//      vec.push_back(6); // add element at the end of the vector
+//      cout << "After adding 6: ";
+//      for(int i=0; i<vec.size(); i++) {
+//         cout << vec[i] << " ";
+//      }
+//      cout << endl;
+
+//       vec.pop_back(); // remove last element from the vector
+//      cout << "After removing last element: ";
+//      for(int i=0; i<vec.size(); i++) {
+//         cout << vec[i] << " ";
+//      }
+//      cout << endl;
+//     return 0;
+// }
+
+
+
+// Pattern for the diamond shape    
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+
+//     int n = 5;
+
+//     // Upper part
+//     for(int i = 1; i <= n; i++) {
+
+//         // spaces
+//         for(int j = 1; j <= n-i; j++)
+//             cout<<" ";
+
+//         // stars
+//         for(int j = 1; j <= 2*i-1; j++)
+//             cout << "j";
+
+//         cout << endl;
+//     }
+
+
+//     // Lower part
+//     for(int i = n-1; i >= 1; i--) {
+
+//         // spaces
+//         for(int j = 1; j <= n-i; j++)
+//             cout << " ";
+
+//         // stars
+//         for(int j = 1; j <= 2*i-1; j++)
+//             cout << "*";
+
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+//1
+//1 2
+//1 2 3 
+//1 2 3 4 
+//1 2 3 4 5 
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n = 5;
+
+//     for(int i = 1; i <= n; i++) {
+//         for(int j = 1; j <= i; j++) {
+//             cout << j << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+//1
+//2 2
+//3 3 3 
+//4 4 4 4
+//5 5 5 5 5
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n = 5;
+
+//     for(int i = 1; i <= n; i++) {
+//         for(int j = 1; j <= i; j++) {
+//             cout << i << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+//****
+//*  *
+//*  *
+//****
+// Hollow Square Pattern
+// #include <iostream>
+// using namespace std;    
+
+// int main() {
+//     int n = 4;
+
+//     for(int i = 1; i <= n; i++) {
+//         for(int j = 1; j <= n; j++) {
+//             if(i == 1 || i == n || j == 1 || j == n) {
+//                 cout << "*";
+//             } else {
+//                 cout << " ";
+//             }
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+
+//     int n = 5;
+
+//     // Upper part
+//     for(int i = 1; i <= n; i++) {
+
+//         // spaces
+//         for(int j = 1; j <= n-i; j++)
+//             cout<<" ";
+
+//         // stars
+//         for(int j = 1; j <= 2*i-1; j++)
+//             cout << "j";
+
+//         cout << endl;
+//     }
+
+
+//     // Lower part
+//     for(int i = n-1; i >= 1; i--) {
+
+//         // spaces
+//         for(int j = 1; j <= n-i; j++)
+//             cout << " ";
+
+//         // stars
+//         for(int j = 1; j <= 2*i-1; j++)
+//             cout << "*";
+
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+//     G for G
+//Print Hollow Rectangle
+//Dimond Pattern
+//Swastik Pattern
+
+//Swastik Pattern
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+    
+//     // Ask for size (should be an odd number like 7, 9, 11)
+//     cout << "Enter an odd number for the size: ";
+//     cin >> n;
+
+//     // Check if the input is valid
+//     if (n % 2 == 0) {
+//         cout << "Please enter an odd number!" << endl;
+//         return 0;
+//     }
+
+//     int mid = n / 2;
+
+//     // Nested loops for rows and columns
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < n; j++) {
+            
+//             // Print stars for specific conditions
+//             if (i == mid || j == mid ||
+//                 (i < mid && j == 0) ||           // Top-left bar
+//                 (i > mid && j == n - 1) ||       // Bottom-right bar
+//                 (i == 0 && j > mid) ||           // Top-right bar
+//                 (i == n - 1 && j < mid))         // Bottom-left bar
+//             {
+//                 cout << "* ";
+//             } else {
+//                 cout << "  "; // Print spaces for the rest
+//             }
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+//Check Eligibility for Voting
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+//  bool eligable = true;
+    
+    
+//         if(n < 18) {
+//             eligable = false;
+//         }
+    
+
+//     if(eligable)
+//         cout << "Eligible";
+//     else
+//         cout << "Not Eligible";
+
+//     return 0;
+// }
+
+
+
+
+// a < 3 toddler
+//  a < 13 child
+// 3 < a < 19 teenager
+// 19 < a adult 
+
+// #include <iostream>
+// using namespace std;
+
+// int main () {
+//     int age;
+//     cin >> age;
+
+//     if(age < 3) {
+//         cout << "toddler" << endl;
+//     } else if(age < 13) {
+//         cout << "child" << endl;
+//     } else if(age <= 19) {
+//         cout << "teenager" << endl;
+//     } else {
+//         cout << "adult" << endl;
+//     }
+//     cout << "age is : " << age << endl;
+
+
+//     return 0;
+// }
+
+
+//nested is (write a program for the watt gujarat using nested if)
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int age;
+//     string state;
+//     string address;
+//     cin >> age >> state >> address;
+//     cin >> address;
+
+//     if (age >= 18 && state == "Gujarat") {
+//         if (state == "Gujarat") {
+//             cout << "Eligible to vote in Gujarat" << endl;
+//         } else {
+//             cout << "Not eligible to vote in Gujarat" << endl;
+//         }
+//     } else {
+//         cout << "Not eligible to vote" << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+//
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[] = {10,20,30,40,50,60,70,80};
+
+//     int n = 8;
+//     int key = 50;
+
+//     int low = 0;
+//     int high = n-1;
+
+//     while(low <= high) 
+//     {
+
+//         int mid = low + (high - low)/2;
+
+//         if (arr[mid] == key) 
+//         {
+
+//             cout << "key found at index: " << mid << endl;
+//             return 0;
+
+//         }
+
+//         else if(arr[mid] < key)
+//         {
+//             low = mid + 1;
+//         }
+//         else 
+//         {
+//             high = mid - 1;
+//         }
+//     }
+//     cout << "not found" << endl;
+
+//     return 0;
+// }
+
+
+
+
+
+//TCS (Easy ) - 1. Count the number of occurrences of each character in a string and represent it in a dictionary/map format.
+//Dictionary / Map representation.
+//{'h':1,'e':2,'l':3,'l':4,'o':5}
+//1. Map (std::map)
+//A map stores data in key-value pairs.
 #include <iostream>
 using namespace std;
 
-int main(){
-    int nums[] = {5, 15, 22, 1, -15, -24};
-    int size = 6;
+int main()
+{
+    string s;
+    cin >> s;
 
-    int smallest = INT16_MAX;
-    int largest = INT16_MIN;
+    cout << "{";
 
-    for(int i=0; i<size; i++) {
-       smallest = min(smallest, nums[i]);
-       largest = max(largest, nums[i]);
-        }
-    
+    for(int i=0;i<s.length();i++)
+    {
+        cout << "'" << s[i] << "':" << i+1;
 
-    cout << "Smallest number is: " << smallest << endl;
-    cout << "Largest number is: " << largest << endl;
+        if(i != s.length()-1)
+            cout << ",";
+    }
+
+    cout << "}";
+
     return 0;
 }
