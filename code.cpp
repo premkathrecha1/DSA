@@ -1503,25 +1503,139 @@
 //{'h':1,'e':2,'l':3,'l':4,'o':5}
 //1. Map (std::map)
 //A map stores data in key-value pairs.
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     string s;
+//     cin >> s;
+
+//     cout << "{";
+
+//     for(int i=0;i<s.length();i++)
+//     {
+//         cout << "'" << s[i] << "':" << i+1;             
+
+//         if(i != s.length()-1)
+//             cout << ",";
+//     }
+
+//     cout << "}";
+
+//     return 0;
+// }
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+
+
+//     if (n % 2 == 0) {
+//         cout << "Even" << endl;
+//     } else {
+//         cout << "Odd" << endl;
+//     }
+//     return 0;
+// }
+
+
+//Prime Number Check
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n;
+//     cin >> n;
+
+//     bool isPrime = true;
+//     for(int i=2; i<=n/2; i++){
+//         if(n % i == 0){
+//             isPrime = false;
+//             break;
+//         }
+//     }
+//     if(isPrime){
+//         cout << "Prime" << endl;
+//     } else {
+//         cout << "Not Prime" << endl;
+//     }
+//     return 0;
+// }
+
+
+
+
+//Reverse the number
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n;
+//     cin >> n;
+//     int reverse = 0;
+//     while(n > 0){
+//         int digit = n % 10;
+//         reverse = reverse * 10 + digit;
+//         n = n / 10;
+//     }
+//     cout << reverse << endl;
+//     return 0;
+// }
+
+
+//Palandrome Number
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n;
+//     cin >> n;
+//     int number = n;
+//     int reverse = 0;
+//     while(n > 0){
+//         int digit = n% 10;
+//         reverse = reverse*10 + digit;
+//         n = n/10;
+        
+//     }
+//     // armstrong number
+//     if(number == reverse){
+//         cout << "Palindrome" << endl;
+//     } else {
+//         cout << "Not Palindrome" << endl;
+//     }
+//     return 0;
+// }
+
+
+
+//Armstrong Number
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    string s;
-    cin >> s;
+int main (){
+    int n;
+    cin >> n;
+    int num = n;
+    int sum = 0;
 
-    cout << "{";
-
-    for(int i=0;i<s.length();i++)
-    {
-        cout << "'" << s[i] << "':" << i+1;
-
-        if(i != s.length()-1)
-            cout << ",";
+    while(n > 0){
+        int digit = n%10;
+        sum += digit*digit*digit;
+        n=n/10;
     }
-
-    cout << "}";
-
+    if(num==sum){
+        cout << "the num is armsterong" << endl;
+    }
+    else{
+        cout << "the num is not a armstrong" << endl;
+    }
     return 0;
 }
